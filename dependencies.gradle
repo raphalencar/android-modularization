@@ -1,0 +1,14 @@
+ext {
+
+    kotlinVersion = '1.3.50'
+
+    buildTools = '3.5.2'
+
+    // Koin
+    koinVersion = '2.0.1'
+
+    dependencies = [
+            kotlin: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+            koin  : "org.koin:koin-android:$koinVersion",
+    ]
+}
