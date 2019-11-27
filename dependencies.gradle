@@ -4,11 +4,19 @@ ext {
 
     buildTools = '3.5.2'
 
+    //Rx
+    rxJavaVersion = '2.2.7'
+    rxKotlinVersion = '2.2.0'
+    rxAndroidVersion = '2.1.1'
+
     // Koin
     koinVersion = '2.0.1'
 
     dependencies = [
-            kotlin: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
-            koin  : "org.koin:koin-android:$koinVersion",
+            kotlin   : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+            koin     : "org.koin:koin-android:$koinVersion",
+            rxJava   : "io.reactivex.rxjava2:rxjava:$rxJavaVersion",
+            rxKotlin : "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion",
+            rxAndroid: "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
     ]
 }
