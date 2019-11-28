@@ -1,5 +1,6 @@
 package br.com.rba.data.local.database
 
+import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Transaction
@@ -12,6 +13,7 @@ import io.reactivex.Single
  * DAO (Data Access Object)
  *
  * **/
+@Dao
 interface JobsDao {
 
     @Query("SELECT * FROM jobs")
