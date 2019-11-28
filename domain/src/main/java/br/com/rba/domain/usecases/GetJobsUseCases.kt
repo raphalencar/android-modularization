@@ -2,8 +2,8 @@ package br.com.rba.domain.usecases
 
 import br.com.rba.domain.entities.AndroidJob
 import br.com.rba.domain.repository.AndroidJobsRepository
-import io.reactivex.Observable
 import io.reactivex.Scheduler
+import io.reactivex.Single
 
 /**
  * Usecase: Retornar a lista de AndroidJobs
@@ -16,7 +16,7 @@ class GetJobsUseCases(
     private val scheduler: Scheduler
 ) {
 
-    fun execute(forceUpdate: Boolean) : Observable<List<AndroidJob>> {
+    fun execute(forceUpdate: Boolean) : Single<List<AndroidJob>> {
         return repository.getJobs(forceUpdate).subscribeOn(scheduler)
     }
 }
